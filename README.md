@@ -2,46 +2,135 @@
 
 > An autonomous Application Security (AppSec) prompt and skill module for AI coding assistants (Google Antigravity, Cursor, Copilot, Claude).
 
-## What is this?
-**Vibesec Auditor** transforms your AI coding assistant into a Principal Application Security Engineer. Instead of relying on manual discovery, you simply provide your codebase path, and the AI autonomously executes a rigorous **12-Phase Security Scan**.
+# Installation
 
-It bridges the gap between "AI-generated applications that work" and "Secure production-grade software."
+## For Google Antigravity Users
 
-## Features
-* 🤖 **Zero-Config Discovery**: Automatically infers your frontend, backend, database, and cloud infrastructure.
-* 🔍 **12-Phase Security Audit**: Covers everything from Secret Detection (Phase 1) to Cloud Security (Phase 9) and Logging (Phase 11).
-* 🛡️ **AppSec Methodologies**: Checks for IDOR, Privilege Escalation, Mass Assignment, Injection, and AI-specific vulnerabilities.
-* 🚫 **Strict Production Gates**: Concludes with a definitive BLOCK, CONDITIONAL, or APPROVED release decision.
+If you are building with AI, you already know how powerful it is to turn ideas into working software.
 
-## Installation
+This skill helps you take the next step: making sure the application you built is safe, reliable, and ready for real users.
 
-### For Google Antigravity Users
-Clone this repository directly into your global skills folder. Antigravity will automatically detect the `SKILL.md` YAML frontmatter.
+You do not need to be a security expert.
+
+Whether you are:
+
+- A founder building your first SaaS product
+- A domain expert creating an internal tool
+- A designer turning an idea into an app
+- A business professional automating your workflow
+- A developer experimenting with AI-assisted coding
+
+this skill acts as your security partner.
+
+It reviews your application like an experienced security engineer would, identifies hidden risks, and helps you fix them before they become real problems.
+
+Clone this repository into your global skills folder. Antigravity will automatically detect the `SKILL.md` YAML frontmatter.
+
 ```bash
 cd ~/.gemini/config/skills
 git clone https://github.com/YOUR_USERNAME/vibesec-auditor.git infosec-vibecoded-apps
 ```
 
-### For Cursor / Windsurf Users
-Copy the contents of `SKILL.md` into your `.cursorrules` or `.windsurfrules` file at the root of your project.
+---
 
-### For ChatGPT / Claude
-Simply copy the entire text of `SKILL.md`, paste it into the chat, and say:
-*"Adopt this persona. My codebase is attached/located at [PATH]."*
+## For Cursor / Windsurf Users
 
-## The 12 Phases
-1. **Repository Security Scan** (Secrets, Git History, Dependencies)
-2. **AI-Generated Code Risk Assessment**
-3. **Authentication Security Testing**
-4. **Authorization Testing** (IDOR, Privilege Escalation)
-5. **API Security Testing**
-6. **Injection Testing** (SQLi, NoSQLi, XSS, SSRF)
-7. **Frontend Security Testing**
-8. **Database Security Testing**
-9. **Cloud Security Testing**
-10. **Infrastructure Security** (Docker, K8s)
-11. **Logging and Monitoring**
-12. **Security Regression Testing**
+AI coding has made it possible for anyone with domain knowledge to build powerful applications.
+
+Add this skill to your project so your AI coding assistant can help you think about security while you build.
+
+Copy the contents of `SKILL.md` into your:
+
+* `.cursor/rules`
+* `.windsurfrules`
+
+file at the root of your project.
 
 ---
-*Built for the vibe-coding era.*
+
+## For ChatGPT / Claude Users
+
+You can use this skill with your AI coding assistant by sharing the contents of `SKILL.md`.
+
+Start with:
+
+> Adopt this security engineer persona. Review my application codebase and help me identify and fix security risks. My codebase is located at [PATH].
+
+The assistant will analyse your application, understand the technology stack automatically, and guide you through improving its security.
+
+---
+
+# What This Skill Does
+
+This is not a generic vulnerability scanner.
+
+It is designed specifically for the new era of AI-assisted development, where people with deep business and domain expertise can build software faster than ever before.
+
+The skill helps answer:
+
+* "Is my app safe before I launch it?"
+* "Did my AI coding assistant introduce security problems?"
+* "Could users access data they should not see?"
+* "Are my APIs and databases protected?"
+* "Are my secrets and credentials safe?"
+* "What should I fix before going live?"
+
+---
+
+# Security Review Journey
+
+The skill performs a structured review across 12 areas:
+
+1. Repository Security Scan
+   Find exposed secrets, risky dependencies, and unsafe configurations.
+
+2. AI-Generated Code Risk Assessment
+   Identify common security mistakes introduced during rapid AI-assisted development.
+
+3. Authentication Security Testing
+   Review login, sessions, passwords, and identity controls.
+
+4. Authorization Testing
+   Verify users can only access what they should.
+
+5. API Security Testing
+   Check whether your application's interfaces are protected.
+
+6. Injection Testing
+   Look for unsafe inputs and data handling issues.
+
+7. Frontend Security Testing
+   Review browser-side risks and exposed information.
+
+8. Database Security Testing
+   Check data access controls and database exposure.
+
+9. Cloud Security Testing
+   Review hosting, permissions, and cloud configuration.
+
+10. Infrastructure Security
+    Check Docker, containers, and deployment setup.
+
+11. Logging and Monitoring
+    Ensure problems can be detected and investigated.
+
+12. Security Regression Testing
+    Create safeguards so vulnerabilities do not return.
+
+---
+
+# Built for the Vibe Coding Era
+
+Great software has always started with great ideas.
+
+AI has changed who can build software.
+
+Security should not become a barrier to creation.
+
+This skill exists to help builders move from:
+
+> "I built something amazing."
+
+to:
+
+> "I built something amazing that people can safely trust."
