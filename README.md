@@ -6,6 +6,12 @@
 
 > An autonomous **Application Security (AppSec) prompt and skill module** for AI coding assistants (Google Antigravity, Cursor, Copilot, Claude, Windsurf). Converts AI-generated apps into secure production software.
 
+---
+### ⭐️ Support the Project
+**If this skill helps you secure your application, please consider leaving a Star on this repository!** 
+It takes one click, helps other builders find this tool, and is incredibly appreciated.
+---
+
 ## Why This Exists (For the Vibe Coders)
 
 If you are building with AI, you already know how powerful it is to turn ideas into working software. 
