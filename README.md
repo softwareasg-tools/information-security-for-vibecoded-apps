@@ -1,136 +1,89 @@
 # Vibesec Auditor: Autonomous AI Security Agent 🛡️
 
-> An autonomous Application Security (AppSec) prompt and skill module for AI coding assistants (Google Antigravity, Cursor, Copilot, Claude).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![AppSec](https://img.shields.io/badge/Security-AppSec-blue.svg)]()
+[![AI Prompt](https://img.shields.io/badge/AI-Agent_Prompt-purple.svg)]()
 
-# Installation
+> An autonomous **Application Security (AppSec) prompt and skill module** for AI coding assistants (Google Antigravity, Cursor, Copilot, Claude, Windsurf). Converts AI-generated apps into secure production software.
 
-## For Google Antigravity Users
+## Why This Exists (For the Vibe Coders)
 
-If you are building with AI, you already know how powerful it is to turn ideas into working software.
+If you are building with AI, you already know how powerful it is to turn ideas into working software. 
 
-This skill helps you take the next step: making sure the application you built is safe, reliable, and ready for real users.
-
-You do not need to be a security expert.
+This skill helps you take the next crucial step: making sure the application you built is safe, reliable, and ready for real users. **You do not need to be a cybersecurity expert.**
 
 Whether you are:
+- A **founder** building your first SaaS product
+- A **domain expert** creating an internal business tool
+- A **designer** turning an idea into a web app
+- A **business professional** automating your workflow
+- A **developer** experimenting with AI-assisted coding and rapid prototyping
 
-- A founder building your first SaaS product
-- A domain expert creating an internal tool
-- A designer turning an idea into an app
-- A business professional automating your workflow
-- A developer experimenting with AI-assisted coding
+...this skill acts as your automated **DevSecOps partner**. It reviews your application like an experienced security engineer would, identifies hidden vulnerabilities, and helps you fix them before they become real problems.
 
-this skill acts as your security partner.
+---
 
-It reviews your application like an experienced security engineer would, identifies hidden risks, and helps you fix them before they become real problems.
+## Installation & Usage Guide
 
-Clone this repository into your global skills folder. Antigravity will automatically detect the `SKILL.md` YAML frontmatter.
-
+### 🪐 For Google Antigravity Users
+Clone this repository directly into your global skills folder. Antigravity will automatically detect the `SKILL.md` YAML frontmatter.
 ```bash
 cd ~/.gemini/config/skills
-git clone https://github.com/YOUR_USERNAME/vibesec-auditor.git infosec-vibecoded-apps
+git clone https://github.com/softwareasg-tools/information-security-for-vibecoded-apps.git infosec-vibecoded-apps
 ```
 
----
+### 🖱️ For Cursor / Windsurf Users
+AI coding has made it possible for anyone with domain knowledge to build powerful web applications. Add this skill to your project so your AI coding assistant can help you think about security while you build.
 
-## For Cursor / Windsurf Users
+Copy the contents of `SKILL.md` into your `.cursorrules` or `.windsurfrules` file at the root of your project.
 
-AI coding has made it possible for anyone with domain knowledge to build powerful applications.
+### 🤖 For ChatGPT / Claude / GitHub Copilot
+You can use this automated code review prompt with any LLM by sharing the contents of `SKILL.md`. Start your chat with:
 
-Add this skill to your project so your AI coding assistant can help you think about security while you build.
+> *"Adopt this security engineer persona. Review my application codebase and help me identify and fix security risks. My codebase is located at [PATH]."*
 
-Copy the contents of `SKILL.md` into your:
-
-* `.cursor/rules`
-* `.windsurfrules`
-
-file at the root of your project.
+The AI assistant will analyze your application, auto-detect your technology stack, and guide you through patching security flaws.
 
 ---
 
-## For ChatGPT / Claude Users
+## What This Skill Does
 
-You can use this skill with your AI coding assistant by sharing the contents of `SKILL.md`.
+This is not a generic vulnerability scanner. It is an **LLM-optimized security prompt** designed specifically for the new era of AI-assisted development (vibe coding), where people with deep business expertise can build software faster than ever before. 
 
-Start with:
-
-> Adopt this security engineer persona. Review my application codebase and help me identify and fix security risks. My codebase is located at [PATH].
-
-The assistant will analyse your application, understand the technology stack automatically, and guide you through improving its security.
-
----
-
-# What This Skill Does
-
-This is not a generic vulnerability scanner.
-
-It is designed specifically for the new era of AI-assisted development, where people with deep business and domain expertise can build software faster than ever before.
-
-The skill helps answer:
-
-* "Is my app safe before I launch it?"
-* "Did my AI coding assistant introduce security problems?"
-* "Could users access data they should not see?"
-* "Are my APIs and databases protected?"
-* "Are my secrets and credentials safe?"
-* "What should I fix before going live?"
+The skill helps answer critical pre-launch questions:
+* "Is my SaaS app safe from hackers before I launch it?"
+* "Did my AI coding assistant accidentally introduce security loopholes?"
+* "Could users access data (IDOR) they shouldn't see?"
+* "Are my REST APIs, GraphQL, and databases protected?"
+* "Are my API keys and credentials safe from leaks?"
 
 ---
 
-# Security Review Journey
+## 🔍 The 12-Phase Security Review Journey
 
-The skill performs a structured review across 12 areas:
+When triggered, the AI agent performs a structured **AppSec audit** across 12 critical vectors:
 
-1. Repository Security Scan
-   Find exposed secrets, risky dependencies, and unsafe configurations.
-
-2. AI-Generated Code Risk Assessment
-   Identify common security mistakes introduced during rapid AI-assisted development.
-
-3. Authentication Security Testing
-   Review login, sessions, passwords, and identity controls.
-
-4. Authorization Testing
-   Verify users can only access what they should.
-
-5. API Security Testing
-   Check whether your application's interfaces are protected.
-
-6. Injection Testing
-   Look for unsafe inputs and data handling issues.
-
-7. Frontend Security Testing
-   Review browser-side risks and exposed information.
-
-8. Database Security Testing
-   Check data access controls and database exposure.
-
-9. Cloud Security Testing
-   Review hosting, permissions, and cloud configuration.
-
-10. Infrastructure Security
-    Check Docker, containers, and deployment setup.
-
-11. Logging and Monitoring
-    Ensure problems can be detected and investigated.
-
-12. Security Regression Testing
-    Create safeguards so vulnerabilities do not return.
+1. **Repository Security Scan:** Finds exposed secrets, risky dependencies, and unsafe `.env` configurations.
+2. **AI-Generated Code Risk Assessment:** Identifies common security hallucinations and mistakes introduced during rapid AI development.
+3. **Authentication Security Testing:** Reviews login flows, JWT sessions, passwords, and identity controls.
+4. **Authorization Testing (RBAC):** Verifies users can only access their own tenant data (prevents IDOR).
+5. **API Security Testing:** Checks whether your application's endpoints are rate-limited and protected.
+6. **Injection Testing:** Looks for SQLi, NoSQLi, XSS, and dangerous data handling issues.
+7. **Frontend Security Testing:** Reviews browser-side risks, CSP headers, and exposed client secrets.
+8. **Database Security Testing:** Checks data access controls and database exposure limits.
+9. **Cloud Security Testing:** Reviews hosting, IAM permissions, and cloud configuration (AWS, Vercel, Supabase, Firebase).
+10. **Infrastructure Security:** Checks Docker containers, Kubernetes, and deployment setup.
+11. **Logging and Monitoring:** Ensures application errors don't leak PII or stack traces.
+12. **Security Regression Testing:** Creates automated safeguards so vulnerabilities do not return.
 
 ---
 
-# Built for the Vibe Coding Era
+## Built for the Vibe Coding Era
 
-Great software has always started with great ideas.
-
-AI has changed who can build software.
-
-Security should not become a barrier to creation.
+Great software has always started with great ideas. AI has fundamentally changed *who* can build software. **Cybersecurity should not become a barrier to creation.**
 
 This skill exists to help builders move from:
+> *"I built something amazing."*
 
-> "I built something amazing."
-
-to:
-
-> "I built something amazing that people can safely trust."
+To:
+> *"I built something amazing that people can safely trust."*
