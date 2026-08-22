@@ -10,6 +10,7 @@
 ### ⭐️ Support the Project
 **If this skill helps you secure your application, please consider leaving a Star on this repository!** 
 It takes one click, helps other builders find this tool, and is incredibly appreciated.
+
 ---
 
 ## Why This Exists (For the Vibe Coders)
