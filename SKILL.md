@@ -182,6 +182,15 @@ Output:
 
 ---
 
+## Test 1.4: Framework Configuration Audit
+Check for unsafe default configurations:
+- `DEBUG = True` in production (Django, Flask)
+- `APP_DEBUG=true` in production (Laravel)
+- Exposed stack traces or verbose error pages
+- Default database credentials
+
+---
+
 # Phase 2: AI Generated Code Risk Assessment
 
 Identify patterns commonly produced by AI coding assistants.
@@ -498,6 +507,14 @@ Check:
 * Default users
 * Default passwords
 * Dangerous permissions
+
+---
+
+## Test 8.4 Backup & Recovery
+Check:
+* Presence of automated database backups
+* Protection against ransomware/wipers
+* Backup encryption
 
 ---
 
