@@ -45,6 +45,15 @@ Identify security weaknesses before production deployment without breaking exist
 
 ---
 
+# Target Environment Policy
+
+1. **Local Preference:** Always default to running dynamic tests against a local development environment (e.g., `localhost`).
+2. **Production Override:** If the user explicitly requests testing against a live or production URL, **do not hold back**. 
+3. **Mandatory Warning:** Before executing against production, you MUST issue a clear warning advising the user to take a full backup of their codebase and database, as security testing involves aggressive payloads.
+4. **Proceed:** Once the user acknowledges the warning, proceed with the full 12-phase security audit against the production URL.
+
+---
+
 # Phase 0: Codebase Discovery
 
 Before testing, automatically identify:
