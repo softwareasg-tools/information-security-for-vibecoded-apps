@@ -615,20 +615,10 @@ Then: Request must fail with authorization error
 
 # Final Report Generation
 
-Generate:
+Generate the report with the following structure, ensuring the score is ALWAYS at the very top:
 
-## Executive Summary
-Include:
-* Overall risk
-* Production readiness
-* Top 10 issues
-
-## Vulnerability Table
-| ID | Severity | Finding | Location | Fix |
-| -- | -------- | ------- | -------- | --- |
-
-## Security Score
-Calculate:
+## 1. VibeSec Audit Score (VAS-100)
+Calculate and display prominently at the top:
 ```
 Authentication     /10
 Authorization       /10
@@ -640,6 +630,16 @@ AI Code Risk        /10
 
 Total Score /100
 ```
+
+## 2. Executive Summary
+Include:
+* Overall risk
+* Production readiness
+* Top 10 issues
+
+## 3. Vulnerability Table
+| ID | Severity | Finding | Location | Fix |
+| -- | -------- | ------- | -------- | --- |
 
 ---
 
