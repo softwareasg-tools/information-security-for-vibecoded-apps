@@ -13,20 +13,27 @@ It takes one click, helps other builders find this tool, and is incredibly appre
 
 ---
 
-## Why This Exists (For the Vibe Coders)
+## 🛡️ Built for Vibe Coders
 
-If you are building with AI, you already know how powerful it is to turn ideas into working software. 
+AI tools are fantastic at writing code that works, but they consistently ignore secure architecture. This project exists to close that loop. This engine was built to solve that exact issue. It brings rigorous, enterprise-grade security engineering directly into your rapid AI workflow.
 
-This skill helps you take the next crucial step: making sure the application you built is safe, reliable, and ready for real users. **You do not need to be a cybersecurity expert.**
+Created by a **Certified Information Systems Auditor (CISA, ISACA, USA)** with over 15 years of hands-on experience in enterprise Application Security, threat modeling, and DevSecOps.
 
-Whether you are:
-- A **founder** building your first SaaS product
-- A **domain expert** creating an internal business tool
-- A **designer** turning an idea into a web app
-- A **business professional** automating your workflow
-- A **developer** experimenting with AI-assisted coding and rapid prototyping
+## 📋 Anchored in Global Infosec Standards
 
-...this skill acts as your automated **DevSecOps partner**. It reviews your application like an experienced security engineer would, identifies hidden vulnerabilities, and helps you fix them before they become real problems.
+The 12-Phase Autonomous Scan strictly enforces the most widely respected cybersecurity frameworks in the industry. The agent's logic is explicitly mapped to:
+* **OWASP Top 10 (2021):** Comprehensive coverage against the most critical web application security risks (Injection, Broken Access Control, Cryptographic Failures).
+* **OWASP ASVS (Application Security Verification Standard):** Automated checks aligned with Level 1 and Level 2 verification requirements for production readiness.
+* **NIST SSDF (Secure Software Development Framework):** Enforces secure-by-design principles natively within your AI-assisted CI/CD pipeline.
+* **MITRE ATT&CK®:** Proactive defense against known adversary tactics, techniques, and procedures targeting cloud and API infrastructure.
+
+## 📊 The VibeSec Audit Benchmark (VAS-100)
+
+To provide quantifiable security metrics, the auditor evaluates your codebase against 80+ security controls to calculate your **VibeSec Audit Score (VAS-100)**. 
+
+The application is graded across 7 weighted domains (Authentication, Authorization, API Security, Cloud Configuration, etc.) to generate a score out of 100. 
+
+🏆 **The Gold Standard:** Applications that score **85/100 or higher** with zero "Critical" findings demonstrate robust resilience equivalent to passing a standard enterprise penetration test. Applications falling below this benchmark will automatically trigger a **BLOCK RELEASE** decision, providing you with exact, minimal code fixes to reach compliance.
 
 ---
 
