@@ -35,6 +35,40 @@ The application is graded across 7 weighted domains (Authentication, Authorizati
 
 🏆 **The Gold Standard:** Applications that score **85/100 or higher** with zero "Critical" findings demonstrate robust resilience equivalent to passing a standard enterprise penetration test. Applications falling below this benchmark will automatically trigger a **BLOCK RELEASE** decision, providing you with exact, minimal code fixes to reach compliance.
 
+<details>
+<summary>📄 <b>Click to view a sample VibeSec Audit Report</b></summary>
+
+> # 🚨 VibeSec Auditor: Final Security Report
+> 
+> ## 1. VibeSec Audit Score (VAS-100)
+> * **Authentication:** 8/10
+> * **Authorization:** 2/10 *(Critical Failure)*
+> * **API Security:** 6/10
+> * **Code Security:** 7/10
+> * **Cloud Security:** 10/10
+> * **DevOps Security:** 4/10
+> * **AI Code Risk:** 6/10
+> 
+> ### 🏆 **Total Score: 43 / 100**
+> *(Target Benchmark: 85/100. Applications scoring below 85 automatically trigger a Block Release decision).*
+> 
+> ---
+> ## 2. Executive Summary
+> * **Overall Risk Level:** HIGH
+> * **Production Readiness:** 🚫 **BLOCK RELEASE**
+> * **Summary:** The application successfully implements JWT authentication and basic input validation. However, significant authorization flaws were detected (IDOR), allowing tenant data leakage. These issues must be remediated before live deployment.
+> 
+> ---
+> ## 3. Vulnerability Table
+> 
+> | ID | Severity | Finding | Location | Recommended Minimal Fix |
+> | -- | -------- | ------- | -------- | ----------------------- |
+> | **V-01** | CRITICAL | **IDOR (Tenant Bypass)** <br> User A can view User B's invoices. | `routes/invoices.js:L42` | Add tenant ownership validation: `if(invoice.tenant_id !== req.user.tenant_id) return 403;` |
+> | **V-02** | HIGH | **Debug Stack Traces Exposed** <br> 500 errors leak environment paths. | `server.js:L18` | Set `NODE_ENV=production` |
+> | **V-03** | MEDIUM | **Missing Rate Limiting** | `routes/auth.js:L12` | Implement `express-rate-limit` middleware (max 5 requests/min). |
+
+</details>
+
 ---
 
 ## Installation & Usage Guide
