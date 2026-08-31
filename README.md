@@ -71,6 +71,61 @@ The application is graded across 7 weighted domains (Authentication, Authorizati
 
 ---
 
+## 🏅 The VibeSec Trust Badge
+
+If your application has passed the automated audit, you can display the **VAS-100 Secured** Trust Badge in your footer to show users you take their security seriously. 
+
+To maintain the integrity of the Gold Standard, the badge must only be displayed if your application meets three criteria:
+1. Achieved a score of **85/100 or higher**.
+2. Contains **zero** Critical or High vulnerabilities.
+3. Is actively served over an encrypted **HTTPS** connection.
+
+### How to add it to your project
+Because the badge represents strict security, it includes a small script to automatically hide itself if the site drops HTTPS protection. 
+
+**For Vanilla HTML/JS Sites:**
+```html
+<div id="vibesec-trust-badge"></div>
+<script>
+  if (window.location.protocol === 'https:') {
+    document.getElementById('vibesec-trust-badge').innerHTML = 
+      '<a href="https://github.com/softwareasg-tools/information-security-for-vibecoded-apps" target="_blank" rel="noopener noreferrer">' +
+      '<img src="https://img.shields.io/badge/VAS--100-Secured-3AB54A?style=flat-square&logo=shield" alt="VibeSec Secured" style="height:20px; border-radius:4px;">' +
+      '</a>';
+  }
+</script>
+```
+
+**For React / Next.js Sites:**
+```jsx
+'use client';
+import { useEffect, useState } from 'react';
+
+export default function VibeSecBadge() {
+  const [isSecure, setIsSecure] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.protocol === 'https:') {
+      setIsSecure(true);
+    }
+  }, []);
+
+  if (!isSecure) return null;
+
+  return (
+    <a href="https://github.com/softwareasg-tools/information-security-for-vibecoded-apps" target="_blank" rel="noopener noreferrer">
+      <img 
+        src="https://img.shields.io/badge/VAS--100-Secured-3AB54A?style=flat-square&logo=shield" 
+        alt="VibeSec Secured" 
+        style={{ height: '20px', borderRadius: '4px' }} 
+      />
+    </a>
+  );
+}
+```
+
+---
+
 ## Installation & Usage Guide
 
 ### 🪐 For Google Antigravity Users

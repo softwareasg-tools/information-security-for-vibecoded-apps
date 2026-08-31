@@ -248,6 +248,20 @@ Detect Examples:
 * Disabled SSL verification
 * Comments claiming security without implementation
 
+## Test 2.5: NVIDIA Updates for Skill Vulnerabilities
+Search:
+- MCP Servers and Agent integrations
+- LLM prompt handling and tool definitions
+- Agent memory and output processing
+
+Detect Examples:
+- **Prompt Injection & Data Exfiltration:** Vectors that allow malicious input to leak sensitive data.
+- **MCP Least Privilege Violations:** Tools requesting excessive permissions or demonstrating rogue agent behavior.
+- **System Prompt Leakage & Memory Poisoning:** Malicious tampering of the LLM context.
+- **Supply-Chain Risks:** Unvetted agent skill installations and trigger abuse.
+
+*Validation:* Review against the 71 vulnerability patterns identified by NVIDIA SkillSpector for AI Agent Skills.
+
 ---
 
 # Phase 3: Authentication Security Testing
